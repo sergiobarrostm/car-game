@@ -1,7 +1,6 @@
 import pygame
 from random import randint
 
-pygame.mixer.init()  # inicializando sistema de audio
 pygame.init()
 
 #importando as imagens
@@ -52,8 +51,7 @@ score=0
 bonus=0
 
 #musica do jogo
-pygame.mixer.music.load("sons/music.mp3")
-pygame.mixer.music.play(-1)
+#pygame.mixer.music.load('')
 
 #tempo na tela
 font=pygame.font.SysFont('arial black',20) #fonte da letra
