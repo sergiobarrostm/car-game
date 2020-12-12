@@ -47,11 +47,22 @@ speed_cars = 8 #velocidade dos demais carros
 #variaveis para marca o tempo
 time=0
 tempo_segundo=0
+score=0
+bonus=0
 
+#musica do jogo
+#pygame.mixer.music.load('')
+
+#tempo na tela
 font=pygame.font.SysFont('arial black',20) #fonte da letra
 texto=font.render("Tempo:  0",True,(255,255,255)) # cor
 pos_texto=texto.get_rect()
 pos_texto.center= 60,30 # posição do texto
+
+# pontuação 'score'
+texto1=font.render("score:  0",True,(255,255,255)) # cor
+pos_texto1=texto1.get_rect()
+pos_texto1.center= 60,60 # posição do texto
 
 screen = pygame.display.set_mode([800, 700])  # tamanho da tela em pixel
 pygame.display.set_caption("Car Game")
@@ -93,19 +104,27 @@ while game_open:
         tempo_segundo+= + 1
         texto = font.render("Tempo:  "+str(tempo_segundo), True, (255, 255, 255) )
         time=0
+        score= bonus+10*tempo_segundo
+        texto1 = font.render("score:  " + str(score), True, (255, 255, 255))
+
+
 
     if tempo_segundo == 15:
         speed_cars = 15
         speed = 20
+        bonus=100
     elif tempo_segundo == 30:
         speed_cars = 20
         speed = 25
+        bonus=200
     elif tempo_segundo == 45:
         speed_cars = 30
         speed = 35
+        bonus=300
     elif tempo_segundo == 60:
         speed_cars = 40
         speed = 50
+        bonus=500
 
     if ( y <= - 50 ):
         y = 0
@@ -141,6 +160,7 @@ while game_open:
     screen.blit(road_2[0], (pos_x_car2, pos_y_car2))
     screen.blit(road_3[0], (pos_x_car3, pos_y_car3))
     screen.blit(texto,pos_texto)
+    screen.blit(texto1,pos_texto1)
     pygame.display.flip()
 
 pygame.quit()
