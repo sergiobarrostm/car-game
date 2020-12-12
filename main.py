@@ -2,6 +2,8 @@ import pygame
 from random import randint
 
 pygame.init()
+pygame.mixer.init()  # inicializando sistema de audio
+
 
 #importando as imagens
 bg_road = pygame.image.load('img/bg_road.png')
@@ -13,6 +15,9 @@ car6 = pygame.image.load("img/cars/car5.png")
 car7 = pygame.image.load("img/cars/car6.png")
 car8 = pygame.image.load("img/cars/car7.png")
 car_player = pygame.image.load("img/cars/car_player.png")
+
+pygame.mixer.music.load("sons/music.mp3")
+pygame.mixer.music.play(-1)
 
 cars = {
     0: [car1, 89, 153],
