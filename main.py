@@ -18,7 +18,7 @@ car7 = pygame.image.load("img/cars/car6.png")
 car8 = pygame.image.load("img/cars/car7.png")
 car_player = pygame.image.load("img/cars/car_player.png")
 
- #imagem do bonus
+ #imagem do bonuss
 score_100 =pygame.image.load("img/scores/score_100.png")
 score_200 =pygame.image.load("img/scores/score_200.png")
 score_300 =pygame.image.load("img/scores/score_300.png")
