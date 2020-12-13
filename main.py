@@ -49,7 +49,6 @@ pos_x_car3 = 480
 pos_y_car3 = -400
 y = 0
 
-
 #variaveis para marca o tempo
 time=0
 tempo_segundo=0
