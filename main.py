@@ -17,8 +17,14 @@ car7 = pygame.image.load("img/cars/car6.png")
 car8 = pygame.image.load("img/cars/car7.png")
 car_player = pygame.image.load("img/cars/car_player.png")
 
+ #imagem do bonus
 score_100 =pygame.image.load("img/scores/score_100.png")
+score_200 =pygame.image.load("img/scores/score_200.png")
+score_300 =pygame.image.load("img/scores/score_300.png")
+score_500 =pygame.image.load("img/scores/score_500.png")
 
+
+#reproduzir a musica
 pygame.mixer.music.load("sons/music.mp3")
 pygame.mixer.music.play(-1)
 
@@ -175,14 +181,19 @@ while True:
             speed_cars = 16
             speed = 25
             bonus=200
+            screen.blit(score_200, (110,180))
+
         elif tempo_segundo == 45:
             speed_cars = 30
             speed = 35
             bonus=300
+            screen.blit(score_300, (110,180))
+
         elif count == 60:
             speed_cars = 40
             speed = 50
             count = 0
             bonus=500
+            screen.blit(score_500, (110,180))
 
     pygame.display.flip()
