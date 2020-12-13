@@ -8,6 +8,7 @@ pygame.init()
 bg_road = pygame.image.load('img/bg_road.png')
 bg_gamer_over = pygame.image.load('img/bg_gamerover.png')
 
+#imagem do carros
 car1 = pygame.image.load("img/cars/car1.png")
 car2 = pygame.image.load("img/cars/car2.png")
 car4 = pygame.image.load("img/cars/car3.png")
@@ -171,6 +172,7 @@ while True:
             pos_y_car3 = randint(-5000,-3200)
             road_3 = cars[(randint(0, len(cars) - 1))]
 
+        #condiçoes no desenrolar do jogo
         if tempo_segundo == 15:
             speed_cars = 12
             speed = 20
